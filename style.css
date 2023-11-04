@@ -1,15 +1,23 @@
 < !DOCTYPE html><html><head><style>body {
-    background-color: lightblue;
+    background-color: coral;
 }
 
 h1 {
-    color: white;
+    color: black;
     text-align: center;
+}
+
+footer {
+    font-size: 8px;
 }
 
 p {
     font-family: verdana;
     font-size: 20px;
+}
+
+#gitlink {
+    color: red;
 }
 
 </style></head></body></html>

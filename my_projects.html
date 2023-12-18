@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="biochemistry_calculator.js"></script>
 </head>
 
 <body>
@@ -19,10 +20,99 @@
     </div>
     <!--  -->
     <h2>My Projects</h2>
-    <p>Some of my projies</p>
-    <ul>Image Classifier</ul>
-    <ul>Biochemistry Calculations</ul>
-    <ul>Raspberry Pi</ul>
+    <div id="projects_overview">
+        <p>
+            <a href="https://github.com/noahrizika/cell-stage-classifier"> <strong>Drosophila Embryonic Cell Stage Image
+                    Classifier</strong></a>
+            </br>
+            The submission of this project completed my Udacity Nanodegree: AWS Machine Learning Engineer. The
+            assignment
+            motivated me to make the most of my education. I combined my biochemistry and premed background into a
+            coding
+            project, reaching out to a professor in the biology department at Dartmouth to learn how I could apply my
+            new
+            skills to benefit his research.
+            </br>
+            </br>
+            <b>The Project's Background</b></br>
+            This project is inspired by an issue that arises in cell biology, specifically, research on Drosophila
+            embryos.
+            The research project that this model aims to assist studies how genes work together to regulate cell
+            behavior,
+            thereby generating different tissue forms. Drosophila embryos are a great model for this research because of
+            their genetic components, live-imaging accessibility and biophysical analysis. The relative ease of cell
+            imaging
+            allows researchers to photograph and classify a cell’s stage at different intervals.
+            </br>
+            </br>
+            <b>Problem Statement</b></br>
+            In this research project, many images of individual cells were captured, manually classified, and further
+            analyzed as per the research focus explained in the previous paragraph. However, classifying the embryonic
+            stage
+            for Drosophila cells is difficult, tedious and time consuming.
+            </br>
+            </br>
+            <b>Solution</b></br>
+            To expedite the research process, I have built an image classification model to classify the stage of
+            embryonic
+            cell development for Drosophila cell images. The project will be created entirely in AWS Sagemaker, using a
+            Jupyter notebook and python training scripts. After manually uploading data to Sagemaker, the data will be
+            augmented and uploaded to S3 via the Jupyter notebook.
+        </p>
+        </br>
+        </br>
+        <p>
+            <a><strong>US and UK Media Representations of AI — Qualitative Data Analysis on the Politicization of
+                    Artificial Intelligence</strong></a>
+            </br>
+            I worked on a small team using python in Jupyter notebooks to analyze 30,000+ US and UK newspaper articles
+            from January 2001 to June 2023. View our <a
+                href="https://docs.google.com/presentation/d/1vCQ_vinZZFF5b16irHkX2hO2T2zil4xn4HVspVM_bas/edit?usp=sharing">presentation</a>
+            and read about one of our <a
+                href="https://docs.google.com/document/d/1yojKrePDw7_y6FxYnBdYTs9fTp-voOdJdYO-7Bn4q2E/edit?usp=sharing">key
+                findings</a> on how media outlets of different political leanings cover AI's ethical
+            implications. Before conducting our research, we perfomed a comprehensive <a
+                href="https://docs.google.com/document/d/1o1ZshUm52NgYkK2yMkXdVZfrO7qF4DjzNaF-dc_Yu0g/edit?usp=sharing">literature
+                review</a> on the currently small but promising research on media representations of AI.
+        </p>
+        <br>
+        <p>
+            <a><strong>Biochemistry Calculator</strong></a>
+        <p>As a major in Biochemistry, I've learned many simple yet tedious and time-consuming calculations. Creating
+            programs to automate these calculations allowed me to focus on the larger scope of a problem while also
+            reducing errors.</p>
+
+        <h4>DNA Stacking Energy Calculator</h4>
+        <p>DNA is stabilized by the hydrogen bonds between paired nucelotides on corresponding strands. However, the
+            interactions between stacked nucelotides on each strand play an even larger role in stabilizing DNA. This
+            program calculates the stacking energies of a double-stranded DNA (dsDNA). Lower energies indicate greater
+            stability.</p>
+        <p id="stacking_energy_instructions">Enter one DNA strand 5' to 3' (use capital letters):</p>
+        <input type="text" id="dna_strand" name="dna_strand"><br><br>
+        <button onclick="calc_stacking_energies()">Calculate dsDNA Stacking Energy</button>
+        <p id="stacking_energy_output">Stacking Energy: 0 kJ/mol</p>
+        <br>
+
+        <h4>DNA Paired Strand</h4>
+        <p>DNA is made of nucelotides and is double stranded. The nucelotides bond with a specific nucelotide, thereby
+            creating double stranded DNA.</p>
+        <p id="dna_bp_instructions">Enter DNA strand 5' to 3' (use capital letters):</p>
+        <input type="text" id="dna_strand_bp" name="dna_strand_bp"><br><br>
+        <button onclick="get_complementary_dna()">Get complementary DNA strand</button>
+        <p id="dna_complementary_output">Complementary DNA strand is: </p>
+        <br>
+
+        <h4>RNA Paired Strand</h4>
+        <p>RNA is made by DNA>...d. is made of nucelotides and is double stranded. The nucelotides bond with a specific
+            nucelotide, thereby
+            creating double stranded DNA.</p>
+        <p id="rna_instructions">Enter DNA strand 5' to 3' (use capital letters):</p>
+        <input type="text" id="rna_strand" name="rna_strand"><br><br>
+        <button onclick="get_coded_rna()">Get complementary RNA strand</button>
+        <p id="rna_output">Coded RNA strand is: </p>
+        </p>
+        <p></p>
+    </div>
 </body>
 
 </html>

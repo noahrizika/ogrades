@@ -59,7 +59,7 @@ function get_complementary_dna() {
         for (let i = 0; i < dna_strand_length; i++) {
             complementary_dna += dna_bp.get(dna_strand[i]);
         }
-        document.getElementById("dna_complementary_output").innerHTML = "Complementary DNA sequence: 3'- " + complementary_dna + " -5'";
+        document.getElementById("dna_complementary_output").innerHTML = "Complementary DNA Sequence: 3'- " + complementary_dna + " -5'";
     }
 
 }
@@ -73,7 +73,7 @@ function get_coded_rna() {
     }
     else {
         let rna_code = dna_strand.replaceAll("A", "U");
-        document.getElementById("rna_output").innerHTML = "Coded RNA sequence: 5'- " + rna_code + " -3'";
+        document.getElementById("rna_output").innerHTML = "Coded RNA Sequence: 5'- " + rna_code + " -3'";
     }
 
 }

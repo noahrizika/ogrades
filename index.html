@@ -1,47 +1,399 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <title>Noah Rizika</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
-</head>
-
-<body>
-
-    <!-- nav bar -->
-    <div class="topnav">
-        <a class="active" href="index.html">Home</a>
-        <a href="my_projects.html">My Projects</a>
-        <a href="about_me.html">About</a>
-        <a href="contact.html">Contact</a>
-    </div>
-    <!--  -->
-
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>
-    <section>
-        <h2>About Me</h2>
-        <div class="about_me_container">
-            <div class="about_me_text">
-                <p>My name is Noah Rizika, and I'm a senior at Middlebury College in Vermont. I'll be graduating with a
-                    degree in biochemistry, and after deciding against medical and biochemical research careers, I'm
-                    pursuing my other interest: coding! I'm looking to combine my medical and chemical knowledge into a
-                    career in creating embedded medical device software.</p>
-                <p>Before pursing a career in programming, I've had a variety of experiences, ranging from leading
-                    groups on multi-day backcountry trips to assisting in neuroscience research. Orchestrating
-                    my own computer science education, I've taken Computer Architecture and Qualitative Data Analysis at
-                    Middlebury, and many more online courses from Coursera, Udemy and Udacity. Most notably, I've earned
-                    Udacity's Nanodegree in Machine Learning with AWS.</p>
-            </div>
-            <div class="about_me_image"><img src="me_mallorca.jpeg" alt=""></div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Noah Rizika</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Noah Rizika</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/me-profile-pic.png" alt="Noah Rizika profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hey, I'm</p>
+        <h1 class="title">Noah Rizika</h1>
+        <p class="section__text__p2">Senior Undergraduate</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/me-resume-example.pdf')"
+          >
+            View Resume
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/noah-rizika/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/noahrizika'" 
+          />
+          <!-- ???? HOW TO HAVE LINK OPEN IN NEW TAB ???? -->
+        </div>
+      </div>
     </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/me-about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <!-- <p>2+ yrs<br />Frontend Developer, C++</p> -->
+              <p>Machine Learning<br>Python, C++, JS, HTML, CSS</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Bachelor of Arts, Biochemistry<br />Middlebury College</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+                My name is Noah Rizika, and I'm a senior at Middlebury College in Vermont. I'm graduating with a biochemistry degree, and after deciding against becoming a medical doctor, I've decided to pursue my other interest in coding. I aim to combine my medical and chemical knowledge into a career in creating embedded medical device software. <br>
 
-    <footer>&copy; 2023 Noah Rizika
+                Before pursing a career in programming, I had a range of experiences ranging from leading multi-day backcountry trips to assisting in neuroscience research. Building my own CS education, I've taken classes in data structures and algorithms, computer architecture, qualitative data analysis, as well as an extensive machine learning course in AWS.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Hard Skills</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C++</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>AWS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Jupyter Notebooks</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>GitHub</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Soft Skills</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Problem Analysis</h3>
+                  <!-- <p>Intermediate</p> -->
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Communication</h3>
+                  <!-- <p>Intermediate</p> -->
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Group Work</h3>
+                  <!-- <p>Experienced</p> -->
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Quick Learner</h3>
+                  <!-- <p>Intermediate</p> -->
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/me-project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title"><i>Drosophila</i> Embryonic Cell Stage Image Classifier</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/me-project-report.pdf')"
+              >
+                Project Report
+              </button>
+              <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/noahrizika/cell-stage-classifier'"
+            >
+              Github
+            </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/me-project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">US and UK Media Portrayal of AI</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/Artificial-Intelligence-Literature-Review.pdf')"
+              >
+                Literature Review
+              </button>
+            </div>
+            <br>
+            <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/Artifical-Intelligence-Presentation.pdf')"
+              >
+                Presentation
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/Artificial-Intelligence-Blog-Post.pdf')"
+              >
+                Blog Post
+              </button>
+            </div>
+            <br>
+            <div class="btn-container">
+                <!-- <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/Artificial-Intelligence-Blog-Post.pdf')"
+              >
+                Blog Post
+              </button> -->
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/me-project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Biochemistry Calculator</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='biochemistry_calculator.html'"
+              >
+                Stacking Energies
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='biochemistry_calculator.html'"
+              >
+                DNA/RNA Base Pairing
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:noahrizika@gmail.com">noahrizika@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/noah-rizika/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2023 Noah Rizika. All Rights Reserved.</p>
     </footer>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>

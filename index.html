@@ -4,25 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noah Rizika | Portfolio</title>
+    <title>OGrades</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <link rel="icon" href="assets/favicon.ico" />
+    <script type="text/javascript" src="script.js"></script>
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">Noah Rizika</div>
+    <nav id="desktop-nav" class="navbar">
+      <div class="logo">O grades</div>
       <div>
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#abOut">about</a></li>
+          <li><a href="#grade-my-climb">grade my climb</a></li>
         </ul>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Noah Rizika</div>
+    <nav id="hamburger-nav" class="navbar">
+      <div class="logo">O grades</div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -30,382 +29,213 @@
           <span></span>
         </div>
         <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li><a href="#about" onclick="toggleMenu()">abOut</a></li>
+          <li>
+            <a href="#grade-my-climb" onclick="toggleMenu()">grade my climb</a>
+          </li>
         </div>
       </div>
     </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Noah Rizika profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hey, I'm</p>
-        <h1 class="title">Noah Rizika</h1>
-        <p class="section__text__p2">Senior Undergraduate</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume.pdf')"
-          >
-            View Resume
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="openLinkInNewTab('https://www.linkedin.com/in/noah-rizika/')"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="openLinkInNewTab('https://github.com/noahrizika')"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
+    <div id="home-container">
+      <p class="home-text-p1">the Only</p>
+      <p class="home-text-p2">grading system</p>
+      <p class="home-text-p3">yOu need</p>
+      <a href="#abOut" class="home-btn">
+        learn mOre
+        <img src="assets/arrow-down.png" class="icon-arrow-d" alt="arrow" />
+      </a>
+    </div>
+    <div id="abOut">
+      <p class="about-text-p1">can yOu shOut...</p>
+      <p class="about-text-p2">nO mOre subjective grades</p>
+      <p class="about-text-p3">nO mOre arguments</p>
+      <p class="about-text-p4">nO mOre judgement</p>
+      <p class="about-text-p5">nO mOre egO</p>
+      <p class="about-text-p6">
+        a climb is graded based On the number of sessiOns <br />
+        it wOuld take adam Ondra to send
+      </p>
+      <p class="about-text-p7">
+        see the WideBoyz explain their
+        <a
+          class="explanation-link"
+          href="https://wideboyz.com/o-grades/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >revOlutiOnary system</a
+        >
+      </p>
+      <iframe
+        class="explanation-video"
+        width="420"
+        height="236"
+        src="https://www.youtube.com/embed/AMTdQ5ebBQ8?si=BoiPZSmgs8KssI6S&amp;start=341"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div id="grade-my-climb">
+      <div class="container">
+        <div class="column">
+          <p class="title">grade my climb</p>
+          <div class="grade-text">
+            <label
+              >chOOse a climb type:
+              <input
+                list="climbType"
+                class="climbTypeInput"
+                placeholder="climb type"
               />
-              <h3>Experience</h3>
-              <!-- <p>2+ yrs<br />Frontend Developer, C++</p> -->
-              <p>Machine Learning, React<br>Python, C++, JavaScript/HTML/CSS</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
+            </label>
+            <datalist id="climbType" class="climbTypeOptions">
+              <option value="boulder"></option>
+              <option value="spOrt"></option>
+              <option value="trad"></option>
+            </datalist>
+          </div>
+          <div class="grade-text">
+            <label for="climb name">climb's name (not case sensitive)</label>
+            <input type="text" id="climbNameInput" placeholder="climb's name" />
+          </div>
+          <div class="grade-text">
+            <label
+              >chOOse its grading system:
+              <input
+                list="gradeSystem"
+                class="gradeSystemInput"
+                placeholder="grading system"
               />
-              <h3>Education</h3>
-              <p>Bachelor of Arts, Biochemistry<br />Middlebury College</p>
-            </div>
+            </label>
+            <datalist id="gradeSystem" class="gradeSystemOptions">
+              <option value="hueco/v"></option>
+              <option value="fOnt/bleau"></option>
+              <option value="french"></option>
+              <option value="yOsemite"></option>
+            </datalist>
           </div>
-          <div class="text-container">
-            <p>
-                My name is Noah Rizika, and I'm a graduating senior at Middlebury College pursuing a career in software development. While studying biochemistry, I taught myself Python and C++, and took classes in data structures and algorithms, computer architecture, big data analysis, and an extensive AWS machine learning course. I've created a computer vision model for biology research in AWS SageMaker, custom Python functions for data analysis, a multi-page React web app for Middlebury College's rock climbing community, calculators for biochemistry, and more. Please visit <a onclick="openLinkInNewTab('https://github.com/noahrizika')">my GitHub</a> and see <a href="#projects">my projects</a> below for links and more information.
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Hard Skills</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C++</h3>
-                  <p>Foundational</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Foundational</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript, HTML/CSS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Jupyter Notebooks</h3>
-                  <p>Advanced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>AWS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Soft Skills</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Problem Analysis</h3>
-                  <br>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Effective Communication</h3>
-                  <br>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Leadership</h3>
-                  <br>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Self Learner</h3>
-                  <br>
-                </div>
-              </article>
-
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Resourceful</h3>
-                  <br>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Collaboration</h3>
-                  <br>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1-cell.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title"><i>Drosophila</i> Embryonic Cell Stage Image Classifier</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('./assets/project-report.pdf')"
-              >
-                Project Report
-              </button>
-              <button
-              class="btn btn-color-2 project-btn"
-              onclick="openLinkInNewTab('https://github.com/noahrizika/cell-stage-classifier')"
+          <div class="grade-text">
+            <label for="grade of climb"
+              >climb's grade (not case sensitive)</label
             >
-              Github
-            </button>
-            </div>
+            <input
+              type="text"
+              id="climbGradeInput"
+              placeholder="climb's grade"
+            />
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2-ai.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">US and UK Media Portrayal of AI</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('./assets/Artificial-Intelligence-Literature-Review.pdf')"
-              >
-                Literature Review
-              </button>
-            </div>
-            <br>
-            <div class="btn-container">
-                <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('./assets/Artificial-Intelligence-Presentation.pdf')"
-              >
-                Presentation
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('./assets/Artificial-Intelligence-Blog-Post.pdf')"
-              >
-                Blog Post
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3-biochem.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Biochemistry Calculator</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='biochemistry_calculator.html'"
-              >
-                Stacking Energies
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='biochemistry_calculator.html'"
-              >
-                DNA/RNA Base Pairing
-              </button>
-            </div>
-          </div>
+          <a
+            href="#get-your-O-grade"
+            class="submit-btn"
+            id="startButton"
+            onclick="getGrade()"
+          >
+            get your O grade
+          </a>
+        </div>
+        <div class="column">
+          <img
+            class="grade-table"
+            src="./assets/grade-table.png"
+            alt="o grade table"
+          />
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:noahrizika@gmail.com">noahrizika@gmail.com</a></p>
+      <br />
+    </div>
+    <div id="show-o-grade" class="output-container">
+      <div class="column-l">
+        <p class="methodology-title">
+          <a
+            class="github-icon"
+            href="https://github.com/noahrizika"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="github-icon"
+              src="./assets/github.png"
+              alt="My Github profile"
+            />
+          </a>
+          how does this calculator actually work?
+        </p>
+
+        <p class="methodology">
+          data was pulled from
+          <a href="https://www.8a.nu/" class="link-8a">8a.nu</a> and cleaned.
+          although 8a does not have data on the number of sessions or attempts
+          until a send, Ondra often wrote a comment for each of his climbs.
+          within this comment, he frequently mentioned the duration of time
+          and/or number of sessions it took him to send. when this is the case,
+          the phrase was isolated from the comment, cleaned, and saved into the
+          finalized csv file. the climbs without comments have O grades as
+          determined by the average O grade for climbs of that font grade.
+          further, since Ondra has only logged climbs graded at least 8a and 8a+
+          for sport climbing and bouldering, respectively, all lower grades were
+          set to a fixed O grade, subjectively determined. because of the lack
+          of data and reliance on text manipulation of semi-inconsistent comment
+          wording, there are likely to be inaccuracies. if you happen across
+          one, please reach out so i can change it!
+        </p>
+      </div>
+      <div class="column-r" id="get-your-O-grade">
+        <div>
+          <p class="o-grade-text">
+            O
+            <span id="count">27</span>
+          </p>
+          <p class="output-label">O grade</p>
         </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/noah-rizika/">LinkedIn</a></p>
+        <div>
+          <p class="o-climb-text">
+            <span>a really long name and maybe a traverse</span>
+          </p>
+          <p class="output-label">climb</p>
+        </div>
+        <div>
+          <p class="o-comment-text">
+            <span>"hard"</span>
+          </p>
+          <p class="output-label">Ondra comment</p>
+        </div>
+        <div class="footer">
+          <p>
+            a
+            <a
+              href="https://wideboyz.com/"
+              class="footer-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >WideBoyz</a
+            >
+            idea
+          </p>
+          <p>
+            created by
+            <a
+              href="https://noahrizika.github.io/"
+              class="footer-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >nOah rizika</a
+            >
+          </p>
         </div>
       </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2023 Noah Rizika. All Rights Reserved.</p>
-    </footer>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
+
+<!-- <! <p>specifically:</p>
+            <p>O0 soft = flash/nearly flashed, and pretty soft tbh</p>
+            <p>O0 = flash/nearly flashed (1-2 attempts)</p>
+            <p>O0 hard = flash/nearly flashed...but hard for the grade</p>
+            <p>O0.5 = less than one week</p>
+            <p>O1 = less than one month</p>
+            <p>O2 = less than six months</p>
+            <p>O3 = less than one year</p>
+            <p>O4 = more than one year</p> -->

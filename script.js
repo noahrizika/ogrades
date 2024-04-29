@@ -1,9 +1,9 @@
-function toggleMenu() {
-    const menu = document.querySelector(".menu-links");
-    const icon = document.querySelector(".hamburger-icon");
-    menu.classList.toggle("open");
-    icon.classList.toggle("open");
-  }
+// function toggleMenu() {
+//     const menu = document.querySelector(".menu-links");
+//     const icon = document.querySelector(".hamburger-icon");
+//     menu.classList.toggle("open");
+//     icon.classList.toggle("open");
+//   }
 
 function animateCount(target, duration) {
     console.log('here');
@@ -117,63 +117,56 @@ function getAverageGrade(grade_type, grade) {
                 return '0'
             }
         case ('french'):
-            let int_grade_fr = Number(grade[0])
-            if (int_grade_fr < 6) {
-                return '-3'
-            }
-            else if (grade == '9b' || grade == '5.15b') {
+            if (grade == '9b') {
                 return '3'
             }
-            else if (grade == '9a+' || grade == '5.15a') {
+            else if (grade == '9a+') {
                 return '2'
             }
-            else if (grade == '9a' || grade == '5.14d') {
+            else if (grade == '9a') {
                 return '1'
             }
-            else if (grade == '8c+' || grade == '5.14c') {
+            else if (grade == '8c+') {
                 return '0 +'
             }
-            else if (grade == '8c' || grade == '5.14b') {
+            else if (grade == '8c') {
                 return '0'
             }
-            else if (grade == '8b+' || grade == '5.14a') {
+            else if (grade == '8b+') {
                 return '0'
             }
-            else if (grade == '8b' || grade == '5.13d') {
+            else if (grade == '8b') {
                 return '0 -'
             }
-            else if (grade == '8a+' || grade == '5.13c') {
+            else if (grade == '8a+') {
                 return '0 -'
             }
-            else if (grade == '8a' || grade == '5.13b') {
+            else if (grade == '8a') {
                 return '-1 +'
             }
-            else if (grade == '7c+' || grade == '5.13a') {
+            else if (grade == '7c+') {
                 return '-1'
             }
-            else if (grade == '7c' || grade == '5.12d') {
+            else if (grade == '7c') {
                 return '-1 -'
             }
-            else if (grade == '7b+' || grade == '5.12c') {
+            else if (grade == '7b+') {
                 return '-2 +'
             }
-            else if (grade == '7b' || grade == '5.12b') {
+            else if (grade == '7b') {
                 return '-2'
             }
-            else if (grade == '7a+' || grade == '5.12a') {
+            else if (grade == '7a+') {
                 return '-2 -'
             }
-            else if (grade == '7a' || grade == '5.11d') {
+            else if (grade == '7a') {
                 return '-2 -'
-            }
-            else if (int_grade_fr < 7) {
-                return '-2'
-            }
-            else if (int_grade_fr < 8) {
-                return '-1'
+            }            
+            else if (Number(grade[0]) == 6) {
+                return '-3'
             }
             else {
-                return 'please fully re-enter the grade without spaces (ie: 7b+)'
+                return '-3 -'
             }
 
        case ('yOsemite'):
@@ -231,7 +224,6 @@ function getAverageGrade(grade_type, grade) {
             else {
                 return '-3 -'
             }
-            return 'please fully type out the grade (ie: 5.12a)'
     }        
 }
 
@@ -239,7 +231,7 @@ function isAllInputGiven(grade, climbName) {
     let userInputCount = 0;
     if (isNaN(grade[0]))
     {
-        document.getElementById("climb's-grade-label").innerHTML = "climb's grade - please format the climb's grade properly";
+        document.getElementById("climb's-grade-label").innerHTML = "climb's grade - please fOrmat the climb's grade properly";
     }
     else {
         document.getElementById("climb's-grade-label").innerHTML = "climb's grade";

@@ -5,19 +5,10 @@ function toggleMenu() {
     icon.classList.toggle("open");
   }
 
-// function isNumber(evt) {
-//     evt = (evt) ? evt : window.event;
-//     var charCode = (evt.which) ? evt.which : evt.keyCode;
-//     if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-//         return false;
-//     }
-//     return true;
-// }
-
 function animateCount(target, duration) {
+    console.log('here');
     if (!isNaN(target))
     {
-    
         const start = 0;
         const end = parseInt(target.textContent);
         const range = end - start;
@@ -25,7 +16,7 @@ function animateCount(target, duration) {
         let current = start;
         const timer = setInterval(function() {
             current += increment;
-            target.textContent = Math.round(current);
+            target.textContent = Math.floor(Math.random() * (99 - (-3) + 1)) - 3;
             if (current >= end) {
                 clearInterval(timer);
                 target.textContent = end;
@@ -35,7 +26,6 @@ function animateCount(target, duration) {
 }
 
 document.getElementById('startButton').addEventListener('click', function() {
-    console.log('clicked');
     const targetSpan = document.getElementById('ograde');
     animateCount(targetSpan, 5000); // 5000 milliseconds = 5 seconds
 });
@@ -97,7 +87,6 @@ function getKeyByClimbName(content, content_length, name) {
 }
 
 function getAverageGrade(grade_type, grade) {
-    console.log(grade);
     switch (grade_type) {
         case ('huecO/v'):
             let int_grade_h = Number(grade)
@@ -132,6 +121,51 @@ function getAverageGrade(grade_type, grade) {
             if (int_grade_fr < 6) {
                 return '-3'
             }
+            else if (grade == '9b' || grade == '5.15b') {
+                return '3'
+            }
+            else if (grade == '9a+' || grade == '5.15a') {
+                return '2'
+            }
+            else if (grade == '9a' || grade == '5.14d') {
+                return '1'
+            }
+            else if (grade == '8c+' || grade == '5.14c') {
+                return '0 +'
+            }
+            else if (grade == '8c' || grade == '5.14b') {
+                return '0'
+            }
+            else if (grade == '8b+' || grade == '5.14a') {
+                return '0'
+            }
+            else if (grade == '8b' || grade == '5.13d') {
+                return '0 -'
+            }
+            else if (grade == '8a+' || grade == '5.13c') {
+                return '0 -'
+            }
+            else if (grade == '8a' || grade == '5.13b') {
+                return '-1 +'
+            }
+            else if (grade == '7c+' || grade == '5.13a') {
+                return '-1'
+            }
+            else if (grade == '7c' || grade == '5.12d') {
+                return '-1 -'
+            }
+            else if (grade == '7b+' || grade == '5.12c') {
+                return '-2 +'
+            }
+            else if (grade == '7b' || grade == '5.12b') {
+                return '-2'
+            }
+            else if (grade == '7a+' || grade == '5.12a') {
+                return '-2 -'
+            }
+            else if (grade == '7a' || grade == '5.11d') {
+                return '-2 -'
+            }
             else if (int_grade_fr < 7) {
                 return '-2'
             }
@@ -139,27 +173,65 @@ function getAverageGrade(grade_type, grade) {
                 return '-1'
             }
             else {
-                return '0'
-            }     
+                return 'please fully re-enter the grade without spaces (ie: 7b+)'
+            }
+
        case ('yOsemite'):
-        let int_grade_y = Number(grade[3])
-            if (grade.length < 4) {
-                return '-3 -'
+            if (grade == '5.15b') {
+                return '3'
             }
-            if (int_grade_y < 1) {
-                return '-3'
+            else if (grade == '5.15a') {
+                return '2'
             }
-            else if (int_grade_y < 2) {
-                return '-2'
+            else if (grade == '5.14d') {
+                return '1'
             }
-            else if (int_grade_y < 3) {
+            else if (grade == '5.14c') {
+                return '0 +'
+            }
+            else if (grade == '5.14b') {
+                return '0'
+            }
+            else if (grade == '5.14a') {
+                return '0'
+            }
+            else if (grade == '5.13d') {
+                return '0 -'
+            }
+            else if (grade == '5.13c') {
+                return '0 -'
+            }
+            else if (grade == '5.13b') {
+                return '-1 +'
+            }
+            else if (grade == '5.13a') {
                 return '-1'
             }
+            else if (grade == '5.12d') {
+                return '-1 -'
+            }
+            else if (grade == '5.12c') {
+                return '-2 +'
+            }
+            else if (grade == '5.12b') {
+                return '-2'
+            }
+            else if (grade == '5.12a') {
+                return '-2 -'
+            }
+            else if (grade == '5.11d') {
+                return '-2 -'
+            }
+            else if (grade == '5.11c') {
+                return '-3 +'
+            }
+            else if (grade == '5.11b') {
+                return '-3'
+            }
             else {
-                return '0'
-            } 
-        default:
-            return 'fill out'
+                return '-3 -'
+            }
+            return 'please fully type out the grade (ie: 5.12a)'
     }        
 }
 
@@ -184,9 +256,9 @@ function isAllInputGiven(grade, climbName) {
     }
 
     if (userInputCount < 2) {
-        document.getElementById("ograde").innerHTML = 'fill out';
-        document.getElementById("output-climb-name").innerHTML = 'the form';
-        document.getElementById("output-comment").innerHTML = 'above this';
+        document.getElementById("ograde").innerHTML = 'X';
+        document.getElementById("output-climb-name").innerHTML = 'X';
+        document.getElementById("output-comment").innerHTML = 'fill Out the fOrm abOve this';
         return false;
     }
     else {
@@ -203,7 +275,6 @@ function getGrade() {
     if (!isAllInputGiven(grade, climbName)) {
         return
     }
-    console.log('here');
     let index = getKeyByClimbName(content, content_length, climbName);
     
     // if climb name not in database, determine the grade based on its "official" grade

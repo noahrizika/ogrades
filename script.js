@@ -184,8 +184,8 @@ function isAllInputGiven(grade, climbName) {
     }
 
     if (userInputCount < 2) {
-        document.getElementById("output-climb-name").innerHTML = 'fill out';
-        document.getElementById("ograde").innerHTML = 'the form';
+        document.getElementById("ograde").innerHTML = 'fill out';
+        document.getElementById("output-climb-name").innerHTML = 'the form';
         document.getElementById("output-comment").innerHTML = 'above this';
         return false;
     }

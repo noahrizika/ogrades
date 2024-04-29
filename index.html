@@ -82,49 +82,53 @@
         <div class="column">
           <p class="title">grade my climb</p>
           <div class="grade-text">
-            <label
+            <!-- <label
               >chOOse a climb type:
               <input
                 list="climbType"
                 class="climbTypeInput"
                 placeholder="climb type"
-              />
+              /> -->
             </label>
             <datalist id="climbType" class="climbTypeOptions">
               <option value="boulder"></option>
               <option value="spOrt"></option>
-              <option value="trad"></option>
             </datalist>
           </div>
           <div class="grade-text">
-            <label for="climb name">climb's name (not case sensitive)</label>
+            <label id="climb-name-label" for="climb name">climb's name</label>
             <input type="text" id="climbNameInput" placeholder="climb's name" />
           </div>
           <div class="grade-text">
-            <label
+            <label id="grade-system-label"
               >chOOse its grading system:
+            </label>
               <input
+                type="text"
                 list="gradeSystem"
                 class="gradeSystemInput"
                 placeholder="grading system"
+                id="gradeSystemInput"
               />
-            </label>
+            
             <datalist id="gradeSystem" class="gradeSystemOptions">
-              <option value="hueco/v"></option>
+              <option value="huecO/v"></option>
               <option value="fOnt/bleau"></option>
               <option value="french"></option>
               <option value="yOsemite"></option>
             </datalist>
           </div>
           <div class="grade-text">
-            <label for="grade of climb"
-              >climb's grade (not case sensitive)</label
+            <label id="climb's-grade-label" for="grade of climb"
+              >climb's grade</label
             >
             <input
               type="text"
               id="climbGradeInput"
               placeholder="climb's grade"
             />
+            <!-- onkeypress="return isNumber(event)" -->
+            <!--THIS onkeypress WOULD GO IN THE ABOVE INPUT FIELD-->
           </div>
           <a
             href="#get-your-O-grade"
@@ -165,14 +169,20 @@
 
         <p class="methodology">
           data was pulled from
-          <a href="https://www.8a.nu/" class="link-8a">8a.nu</a> and cleaned.
-          although 8a does not have data on the number of sessions or attempts
-          until a send, Ondra often wrote a comment for each of his climbs.
-          within this comment, he frequently mentioned the duration of time
-          and/or number of sessions it took him to send. when this is the case,
-          the phrase was isolated from the comment, cleaned, and saved into the
-          finalized csv file. the climbs without comments have O grades as
-          determined by the average O grade for climbs of that font grade.
+          <a
+            href="https://www.8a.nu/"
+            class="link-8a"
+            target="_blank"
+            rel="noopener noreferrer"
+            >8a.nu</a
+          >
+          and cleaned. although 8a does not have data on the number of sessions
+          or attempts until a send, Ondra often wrote a comment for each of his
+          climbs. within this comment, he frequently mentioned the duration of
+          time and/or number of sessions it took him to send. when this is the
+          case, the phrase was isolated from the comment, cleaned, and saved
+          into the finalized csv file. the climbs without comments have O grades
+          as determined by the average O grade for climbs of that font grade.
           further, since Ondra has only logged climbs graded at least 8a and 8a+
           for sport climbing and bouldering, respectively, all lower grades were
           set to a fixed O grade, subjectively determined. because of the lack
@@ -185,19 +195,19 @@
         <div>
           <p class="o-grade-text">
             O
-            <span id="count">27</span>
+            <span id="ograde">fill out</span>
           </p>
           <p class="output-label">O grade</p>
         </div>
         <div>
-          <p class="o-climb-text">
-            <span>a really long name and maybe a traverse</span>
+          <p id="output-climb-name" class="o-climb-text">
+            <span>the form</span>
           </p>
           <p class="output-label">climb</p>
         </div>
         <div>
           <p class="o-comment-text">
-            <span>"hard"</span>
+            " <span id="output-comment">above this</span> "
           </p>
           <p class="output-label">Ondra comment</p>
         </div>
@@ -229,13 +239,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
-<!-- <! <p>specifically:</p>
-            <p>O0 soft = flash/nearly flashed, and pretty soft tbh</p>
-            <p>O0 = flash/nearly flashed (1-2 attempts)</p>
-            <p>O0 hard = flash/nearly flashed...but hard for the grade</p>
-            <p>O0.5 = less than one week</p>
-            <p>O1 = less than one month</p>
-            <p>O2 = less than six months</p>
-            <p>O3 = less than one year</p>
-            <p>O4 = more than one year</p> -->

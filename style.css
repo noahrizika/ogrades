@@ -56,11 +56,17 @@ nav {
     font-size: 1.5rem;
 }
 
+.nav-link:hover {
+    color: #06bcf7;
+    text-decoration: none;
+}
+
 a {
     color: black;
     text-decoration: none;
     text-decoration-color: white;
 }
+
 
 .logo {
     font-size: 2rem;
@@ -229,6 +235,8 @@ a {
 .explanation-video {
     padding-left: 6rem;
     padding-top: 1.5rem;
+    width: 31%;
+    height: 40%;
 }
 
 
@@ -237,6 +245,7 @@ a {
 .title {
     font-size: 3rem;
     text-align: center;
+    margin-top: 1rem;
 }
 
 .container {
@@ -356,6 +365,17 @@ label {
     cursor: pointer;
     background-color: #06bcf7;
     border: 2px solid #06bcf7;
+}
+
+.source-link {
+    text-decoration: underline;
+    padding-left: 26%;
+}
+
+.source-link:hover {
+    color: #06bcf7;
+    text-decoration: none;
+
 }
 
 /* O GRADE DISPLAY */

@@ -21,12 +21,9 @@ body {
 }
 
 .navbar {
-    /* Your navbar styles here */
-    /* position: fixed; */
     top: 0;
     width: 100%;
     z-index: 1000;
-    /* Ensure navbar is above the background image */
 }
 
 html {

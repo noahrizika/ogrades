@@ -1,1 +1,1 @@
-![alt text](https://github.com/noahrizika/ogrades/blob/assets/home-background.jpg?raw=true)
+![alt text](https://github.com/noahrizika/ogrades/blob/main/assets/home-background.jpg?raw=true)
